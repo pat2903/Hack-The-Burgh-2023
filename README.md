@@ -1,5 +1,3 @@
 # Hack-The-Burgh-2023
 
-TO DO LIST
-- Wait for model to finish training
-- Find a big enough data set for an endangered species
+- If the score is closer to 1, then the model predicts that the image is a dog, otherwise, it predicts that the image is a cat.
