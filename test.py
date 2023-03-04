@@ -4,29 +4,29 @@ from numpy import asarray
 from numpy import save
 from keras.utils import load_img
 from keras.utils import img_to_array
-
+from keras.utils import to_categorical
 
 # define location of dataset
-folder = 'train/'
+folder = '/'
 photos, labels = list(), list()
 
 # enumerate files in the directory
 for file in listdir(folder):
 
-	# determine class
-	output = 0.0
-	if file.startswith('dog'):
-		output = 1.0
+    # determine class
+    output = 0.0
+    if file.startswith('dog'):
+        output = 1.0
 
-	# load image
-	photo = load_img(folder + file, target_size=(200, 200))
+    # load image
+    photo = load_img(folder + file, target_size=(200, 200))
 
-	# convert to numpy array
-	photo = img_to_array(photo)
+    # convert to numpy array
+    photo = img_to_array(photo)
 
-	# store
-	photos.append(photo)
-	labels.append(output)
+    # store
+    photos.append(photo)
+    labels.append(output)
 
 # convert to a numpy arrays
 photos = asarray(photos)
