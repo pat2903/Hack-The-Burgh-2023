@@ -82,7 +82,7 @@ from keras.preprocessing.image import ImageDataGenerator
 #
 
 
-# define cnn model
+# # define cnn model
 # def define_model():
 #     model = Sequential()
 #     model.add(Conv2D(32, (3, 3), activation='relu', kernel_initializer='he_uniform', padding='same', input_shape=(200, 200, 3)))
@@ -95,7 +95,7 @@ from keras.preprocessing.image import ImageDataGenerator
 #     model.compile(optimizer=opt, loss='binary_crossentropy', metrics=['accuracy'])
 #     return model
 #
-#
+
 # # plot diagnostic learning curves
 # def summarize_diagnostics(history):
 #     # plot loss
@@ -173,6 +173,7 @@ def run_example():
 		model = load_model('final_model.h5')
 		# predict the class
 		count += numpy.round(model.predict(img), 0)
+		print(model.predict(img))
 		# print percentage of pandas
 	print(count/len(listdir(folder)))
 
