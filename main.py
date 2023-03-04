@@ -8,6 +8,12 @@ from random import random
 # baseline model for the dogs vs cats dataset
 import sys
 from matplotlib import pyplot
+from keras.utils import load_img
+from keras.utils import img_to_array
+from os import listdir
+from numpy import append
+from numpy import asarray
+from numpy import save
 from keras.utils import to_categorical
 from keras.models import Sequential
 from keras.layers import Conv2D
@@ -23,7 +29,7 @@ from keras.preprocessing.image import ImageDataGenerator
 #
 # for subdir in subdirs:
 #     # create label subdirectories
-#     labeldirs = ['dogs/', 'cats/']
+#     # labeldirs = ['dogs/', 'cats/']
 #     for labldir in labeldirs:
 #         newdir = dataset_home + subdir + labldir
 #         makedirs(newdir, exist_ok=True)
@@ -47,6 +53,32 @@ from keras.preprocessing.image import ImageDataGenerator
 #     if file.startswith('dog'):
 #         dst = dataset_home + dst_dir + 'dogs/'  + file
 #         copyfile(src, dst)
+
+# # define location of dataset
+# folder = 'dataset/train/'
+# photos, labels = list(), list()
+# # enumerate files in the directory
+# for file in listdir(folder):
+#     # determine class
+#     output = 0.0
+#     if file.startswith('Panda'):
+#         output = 1.0
+#     # load image
+#     photo = load_img(folder + file, target_size=(200, 200))
+#     print(folder + file)
+#     # convert to numpy array
+#     photo = img_to_array(photo)
+#     # store
+#     photos.append(photo)
+#     labels.append(output)
+#     # convert to a numpy arrays
+#     photos = asarray(photos)
+#     labels = asarray(labels)
+#     print(photos.shape, labels.shape)
+#     # save the reshaped photos
+#     save('panda_images_photos.npy', photos)
+#     save('panda_images_labels.npy', labels)
+#
 
 
 # define cnn model
@@ -88,9 +120,9 @@ def run_test_harness():
     # create data generator
     datagen = ImageDataGenerator(rescale=1.0 / 255.0)
     # prepare iterators
-    train_it = datagen.flow_from_directory('dataset_dogs_vs_cats/train/',
+    train_it = datagen.flow_from_directory('dataset/',
                                            class_mode='binary', batch_size=64, target_size=(200, 200))
-    test_it = datagen.flow_from_directory('dataset_dogs_vs_cats/test/',
+    test_it = datagen.flow_from_directory('dataset/',
                                           class_mode='binary', batch_size=64, target_size=(200, 200))
     # fit model
     history = model.fit_generator(train_it, steps_per_epoch=len(train_it),
