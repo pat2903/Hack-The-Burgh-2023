@@ -3,8 +3,6 @@ import random
 
 # returns a list containing random coordinates
 def create_coordinates():
-    # TODO: come up with better comments in this function
-
     # minimum latitude value of selected place
     min_lat = 30
     # range through which latitude can differ
