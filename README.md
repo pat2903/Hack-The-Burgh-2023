@@ -1,4 +1,4 @@
-# Hack The Burgh 2023
+# Hack The Burgh 2023 SDG Task
 
 This is a solution to the Sustainable Development Goals challenge.
 
