@@ -1,4 +1,4 @@
-# Hack The Burgh 2023
+# Hack The Burgh 2023 SDG Task
 
 This is a solution to the Sustainable Development Goals challenge.
 
@@ -16,3 +16,29 @@ This can then be used to track the distribution of the animal and their populati
 Linked is the dataset that was used to train the model (~20 GB):
 [dataset.](https://www.kaggle.com/datasets/utkarshsaxenadn/animal-image-classification-dataset)
 
+
+**Table of probabilities**
+
+| % Pandas Identified |      |
+|---------------------| ---- |
+| 0.9285714           | **panda** |
+| 0.125               | beetle |
+| 0.10891089          | butterfly |
+| 0.1493671           | cat |
+| 0.25153375          | cow |
+| 0.08988764          | dogs |
+| 0.33714285          | elephants |
+| 0.7096774           | gorilla |
+| 0.37931034          | hippo |
+| 0.13861386          | lizard |
+| 0.3783784           | monkey |
+| 0.25742576          | mouse |
+| 0.34653464          | spider |
+| 0.23030303          | tiger |
+| 0.05904059          | zebra |
+| 0.3598485           | sheep |
+| 0.33128834          | squirrels |
+
+**Preview of Heatmap**
+
+![Heatmap](heatmap_preview.png)
