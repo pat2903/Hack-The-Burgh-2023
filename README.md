@@ -38,3 +38,7 @@ Linked is the dataset that was used to train the model (~20 GB):
 | 0.05904059 | zebra |
 | 0.3598485 | sheep |
 | 0.33128834 | squirrels |
+
+**Preview of Heatmap**
+
+![Heatmap](heatmap_preview.png)
