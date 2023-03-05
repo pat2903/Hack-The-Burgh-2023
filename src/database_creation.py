@@ -1,6 +1,6 @@
 from flask import Flask
 import sqlite3
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy, session
 from timestamp_creation import timestamps_int
 from coordinate_creation import create_coordinates
 
@@ -18,6 +18,9 @@ class Coordinates(db.Model):
     longitude = db.Column(db.Float, nullable=False)
     epoch_time = db.Column(db.Integer, nullable=False)
 
+    def __repr__(self):
+        return '<User %r>' % self.id
+
 
 # initializing database
 # with app.app_context():
@@ -34,3 +37,8 @@ def create_database():
                     )
             db.session.add(coordinate)
             db.session.commit()
+
+
+def database_to_list():
+    with app.app_context():
+        return db.session.query(Coordinates).all()
