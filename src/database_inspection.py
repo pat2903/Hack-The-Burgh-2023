@@ -15,11 +15,11 @@ all_coordinates = database_to_list()
 def create_dictionary():
     list = []
     i = 0
-    folder = '/Users/pattaponpuapanichya/Documents/GitHub/Hack-The-Burgh-2023/animal_image_db/'
+    folder = '../animal_image_db/'
     for file in listdir(folder):
         try:
             img = load_image(folder + file)
-            model = load_model('/Users/pattaponpuapanichya/Documents/GitHub/Hack-The-Burgh-2023/final_model.h5')
+            model = load_model('../final_model.h5')
             temp = numpy.round(model.predict(img), 0)
             if temp > 0.75:
                 item = {
