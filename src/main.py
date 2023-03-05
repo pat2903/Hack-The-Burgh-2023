@@ -9,6 +9,7 @@ def main():
 
     # predict the value of a given image (1 - panda, 0 - other animal)
     predict_test_image('../prediction_images/cat_image.jpeg')
+    predict_test_image('../prediction_images/panda_image.jpeg')
 
     # # create database of simulated drone data
     # create_database()

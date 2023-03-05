@@ -28,7 +28,6 @@ Linked is the dataset that was used to train the model (~20 GB):
 | 0.25153375          | cow |
 | 0.08988764          | dogs |
 | 0.33714285          | elephants |
-| 0.7096774           | gorilla |
 | 0.37931034          | hippo |
 | 0.13861386          | lizard |
 | 0.3783784           | monkey |
@@ -38,6 +37,7 @@ Linked is the dataset that was used to train the model (~20 GB):
 | 0.05904059          | zebra |
 | 0.3598485           | sheep |
 | 0.33128834          | squirrels |
+| 0.7096774           | gorilla |
 
 **Preview of Heatmap**
 
