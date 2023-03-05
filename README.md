@@ -13,6 +13,6 @@ outputs a probability. In this case, if the score is closer to a 1, then the mod
 The idea is that this can be used to identify animals in specific locations which can then be translated into a heatmap. 
 This can then be used to track the distribution of the animal and their population over time to aid with conservation efforts.
 
-Linked is the dataset that was used to train the model:
+Linked is the dataset that was used to train the model (~20 GB):
 [dataset.](https://www.kaggle.com/datasets/utkarshsaxenadn/animal-image-classification-dataset)
 
