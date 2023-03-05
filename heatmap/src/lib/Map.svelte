@@ -17,7 +17,7 @@
       );
       console.log(res);
       if (res.data) {
-        const coordinates = res.data.coordinates;
+        const coordinates = res.data;
         loadTheMap(coordinates);
       }
     } catch (err) {
