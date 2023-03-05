@@ -28,7 +28,7 @@ def predict_test_image(image):
     img = load_image(image)
 
     # load model
-    model = load_model('final_model.h5')
+    model = load_model('../final_model.h5')
 
     # predict the class
     result = model.predict(img)
@@ -37,7 +37,7 @@ def predict_test_image(image):
 
 def predict_test_images():
     # define location of dataset
-    folder = 'mass_testing/'
+    folder = '../mass_testing/'
     count = 0
 
     # enumerate files in the directory
@@ -50,7 +50,7 @@ def predict_test_images():
         img = load_image(folder + file)
 
         # load model
-        model = load_model('final_model.h5')
+        model = load_model('../final_model.h5')
 
         # predict the class
         count += numpy.round(model.predict(img), 0)
